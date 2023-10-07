@@ -6,7 +6,8 @@
  * Desscription: print a quote using write function
  * 	write(int fd.const void *buf.size_t count
  *
- * Return: 1 */
+ * Return: 1 (not success)
+ */
 
 int main(void)
 {
