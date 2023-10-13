@@ -2,9 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 
-/** main - Entry point
- * Return: Always 0 (Success)
-*/
+/**
+ *  * main - entry point
+ *   *
+ *    * Description:prints all possible combinations of single-digit numbers
+ *     *
+ *      * Return: 0 (success)
+ *      */
+
 
 int main(void)
 
