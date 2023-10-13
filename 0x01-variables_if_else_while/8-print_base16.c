@@ -3,8 +3,11 @@
 #include <time.h>
 
 /**
- * main - Entry point
- * Return: Always 0 (Success)
+ *  * main - entry point
+ *   *
+ *    * Description: prints all the numbers of base 16 in lowercase, followed by a new line.
+ *     *
+ *      * Return: 0 (success)
 */
 
 int main(void)
