@@ -3,14 +3,15 @@
 #include <time.h>
 
 /** main - Entry point
- * * Return: Always 0 (Success)
+ * Return: Always 0 (Success)
 */
 
-int main()
-{
-	char d;
+int main(void)
 
-	for (d = '0'; d <= "9"; d++)
+{
+	int d;
+
+	for (d = '0'; d <= '9'; d++)
 	{
 	putchar(d);
 	if (d != '9')
