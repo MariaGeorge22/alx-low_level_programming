@@ -2,23 +2,16 @@
 #include <stdbool.h>
 #include <stdio.h>
 /**
- * print_diagsums - string function
- * @a: pointer to board
- * @size: size of Matrix
+ * set_string - string function
+ * @s: pointer to string to replace
+ * @to: pointer to string to replace with
  *
- * prints the sum of diagonals
+ * sets the value of a pointer to a char
  *
- * Return: void
+ * return: null
 */
 
-void print_diagsums(int *a, int size)
+void set_string(char **s, char *to)
 {
-	int i, sum = 0, otherSum = 0;
-
-	for (i = 0; i < size; i++)
-	{
-		sum += *(a + i * size + i);
-		otherSum += *(a + i * size + size - i - 1);
-	}
-	printf("%d, %d\n", sum, otherSum);
+	*s = to;
 }
