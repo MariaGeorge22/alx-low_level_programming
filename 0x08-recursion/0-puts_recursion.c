@@ -8,7 +8,7 @@
  *      * through recursion
  *       *
  *        * Return: void
- *         */
+*/
 void temp_print(char *str)
 {
 		char *next;
@@ -28,7 +28,7 @@ void temp_print(char *str)
  *      * followed by a new line
  *       *
  *        * Return: void
- *         */
+*/
 void _puts_recursion(char *s)
 {
 		temp_print(s);
