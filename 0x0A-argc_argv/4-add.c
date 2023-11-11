@@ -12,18 +12,18 @@
 */
 bool isNumber(char const *str)
 {
-		char const *base = str;
+	char const *base = str;
 
-			while (*base != '\0')
-					{
-								if (!isdigit(*base))
-											{
-															return (false);
-																	}
-										base++;
-											}
+	while (*base != '\0')
+	{
+	if (!isdigit(*base))
+	{
+	return (false);
+	}
+	base++;
+	}
 
-				return (true);
+	return (true);
 }
 /**
  * main - check function
@@ -36,9 +36,9 @@ bool isNumber(char const *str)
 */
 int main(int argc, char const *argv[])
 {
-		int i, sum = 0;
+	int i, sum = 0;
 
-			for (i = 1; i < argc; i++)
+	for (i = 1; i < argc; i++)
 					{
 								if (!isNumber(argv[i]))
 											{
