@@ -10,6 +10,7 @@
 int _abs(int n)
 {
 	int abs;
+
 	abs = n;
 
 	if (abs < 0)
