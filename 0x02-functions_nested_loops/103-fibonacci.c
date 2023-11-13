@@ -10,6 +10,7 @@
 int main(void)
 {
 	long a, b, even_sum, sum;
+
 	a = 1;
 	b = 2;
 	even_sum = 2;
