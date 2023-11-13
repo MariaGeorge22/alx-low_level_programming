@@ -10,6 +10,7 @@
 int main(void)
 {
 	long a, b, i, sum;
+
 	a = 1;
 	b = 2;
 	printf("%ld, %ld, ", a, b);
