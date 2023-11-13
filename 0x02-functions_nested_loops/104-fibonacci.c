@@ -10,12 +10,8 @@
  *
  * Return: a + b
 */
-typedef struct
+big_num sum_big(big_num a, big_num b)
 {
-big_num {
-	int digits[100];
-	int length;
-} big_num;
 
 	big_num sum = {0, 0};
 
