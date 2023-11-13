@@ -15,7 +15,7 @@ if (n <= 98)
 {
 	for (a = n; a <= 98; a++)
 	{
-		pintf("%d", a);
+		printf("%d", a);
 		if (a != 98)
 		{
 			printf(", ");
