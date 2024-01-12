@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdlib.h>
+
 /**
  * insert_dnodeint_at_index - dlinklist function
  * @h: start of node
