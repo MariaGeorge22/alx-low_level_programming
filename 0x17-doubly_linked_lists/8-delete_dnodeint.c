@@ -1,57 +1,41 @@
 #include "lists.h"
 #include <stdlib.h>
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
 /**
-* delete_dnodeint_at_index - Deletes the node at dlistint_t
-* @head: Pointer to a pointer to the head node of the list.
-* @index: Index of the node to be deleted.
-*
-* Return: 1 if successful, -1 otherwise.
+ * delete_dnodeint_at_index - dlinklist function
+ * @head: start of node
+ * @index: location of node to delete
+ *
+ * deletes node at index n
+ * cases:
+ * 1. delete at middle (done)
+ * 2. delete at start (done)
+ * 3. delete at empty (done)
+ * 4. delete at end (done)
+ *
+ * Return: 1 on Success
+ * -1 on Fail
 */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *current = *head;
-	unsigned int dist = 0;
+	size_t current_index;
 
-	/* Handle an empty list */
-	if (*head == NULL)
+	for (current_index = 0; current != NULL; current_index++)
 	{
-		return (-1);
-	}
-
-	/* Handle deleting the first node */
-	if (index == 0)
-	{
-		*head = current->next;
-		if (*head != NULL)
+		if (current_index == index)
 		{
-			(*head)->prev = NULL;
+			if (current->prev != NULL)
+				current->prev->next = current->next;
+			if (current->next != NULL)
+				current->next->prev = current->prev;
+			if (index == 0)
+				*head = current->next;
+			free(current);
+			return (1);
 		}
-		free(current);
-		return (1);
-	}
-
-	/* Traverse the list to find the node before the deletion point */
-	while (current != NULL && dist < index - 1)
-	{
-		dist++;
 		current = current->next;
 	}
 
-	/* Handle deleting a node that doesn't exist */
-	if (current == NULL || current->next == NULL)
-	{
-		return (-1);
-	}
-
-	/* Delete the node at the specified index */
-	current->next = current->next->next;
-	if (current->next != NULL)
-	{
-		current->next->prev = current;
-	}
-	free(current->next);
-
-	return (1);
+	return (-1);
 }
