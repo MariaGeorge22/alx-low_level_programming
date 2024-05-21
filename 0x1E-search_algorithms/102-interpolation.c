@@ -39,6 +39,6 @@ int interpolation_search(int *array, size_t size, int value)
 				high = current - 1;
 		}
 	}
-	
+
 	return (index);
 }
